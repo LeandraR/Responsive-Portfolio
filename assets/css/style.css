@@ -97,7 +97,12 @@ a:visited {
     }
 
 a:hover {
-     color:black;
+     -webkit-transition:opacity .5s ease-out;
+  -moz-transition:opacity .5s ease-out;
+  -ms-transition:opacity .5s ease-out;
+  -o-transition:opacity .5s ease-out;
+  transition:opacity .5s ease-out;
+  opacity:0.7;
     }
 
 .white-background {
@@ -134,9 +139,6 @@ figure {
      position:relative;
 }
 
-.portfolio {
-     /*padding-left:15px;*/
-}
 
 figcaption {
      text-align:center;
@@ -147,17 +149,23 @@ figcaption {
 }
 
 figcaption:hover {
+    -webkit-transition:opacity .5s ease-out;
+  -moz-transition:opacity .5s ease-out;
+  -ms-transition:opacity .5s ease-out;
+  -o-transition:opacity .5s ease-out;
+  transition:opacity .5s ease-out;
+  opacity:0.8;
      color:black;
 }
 
 img {
      width:100%;
+     object-fit:contain;
 }
 
 .headshot {
      max-width:200px;
      padding:10px;
-     float:left;
 }
 
 input, textarea {
@@ -183,8 +191,8 @@ form {
      background-color:#4aaaa5;
 }
 
-.submit-button::hover {
-     background-color:black;
+.submit-button:hover {
+    transform: scale(1.02);
 }
 
 footer {
@@ -202,7 +210,40 @@ footer {
      justify-content:center;
 }
 
+@media (max-width: 980px) {
+    .wrapper {
+        max-width:80%;
+    }
+}
 
+@media (max-width: 768px) {
+    .wrapper {
+        max-width:80%;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .main-content {
+        flex-direction:column;
+        align-content:center;
+    }
+    .nav-bar {
+        width:100%;
+        flex-direction:column;
+    }
+    h1 {
+        width:100%;
+        text-align:center;
+    }
+    #full {
+        max-width:100%;
+    }
+    .submit-button {
+        width:100%;
+    }
+
+}
 
 
 
